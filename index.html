@@ -1,15 +1,37 @@
-<html>
+<html ng-app="pentaKilla">
     <head>
         <!-- CSS -->
+        <link href="styles/bootstrap.min.css" rel="stylesheet">
 
         <!-- Javascript -->
         <script src="scripts/jquery-3.1.1.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
         <script src="scripts/angular.min.js"></script>
         <script src="Seed/matches1.js"></script>
         <script src="Seed/champion1.js"></script>
         <script src="scripts/app.js"></script>
+        <script src="scripts/pentakilla.js"></script>
 
     </head>
     <body>
+        <div class="container-fluid">
+            <div class="page-header">
+                <div class="col-md-offset-4 col-md-4">
+                    <h1>PentaKilla</h1>
+                    <h3>Count my Pentakills</h3> 
+                </div>
+            </div>
+        </div>
+        <div class="container" ng-controller="summonerController as summoner">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Summoner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>

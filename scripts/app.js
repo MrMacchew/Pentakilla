@@ -1,4 +1,4 @@
-var players = [];
+//var players = [];
 
 for(var x = 0; x < 100; x++)
 {
@@ -16,7 +16,23 @@ for(var x = 0; x < 100; x++)
         //players.push(player);
     }
 }
+
+function createSummonerTable(){
+    var players = {};
+    for(var i = 0; i < matches.length; i++){
+        for(var z = 0; z < matches[i].participantIdentities.length; )
+        if(players[matches[i].participantIdentities[z].player.summonerName] == null)
+        {
+            players[matches[i].participantIdentities[z].player.summonerName] = 
+            { "matchCount" : 0,"name" : matches[i].participantIdentities[z].player.summonerName};
+        }
+        player1[matches[i].participantIdentities[z].player.summonerName].matchCount += 1;        
+    }
+    return players;
+}
+
+
 var apiKey = "RGAPI-06a172cb-cf1f-4769-a269-06cf491f494b";
 var nameHeader = "https://na.api.pvp.name";
-var test = $.getJSON();
+
 
